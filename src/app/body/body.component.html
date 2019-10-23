@@ -1,0 +1,34 @@
+<div id="top-body-wrapper" fxLayout="row wrap" fxLayoutAlign="space-around">
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly space-between" id="reviews">
+        <mat-card *ngFor="let review of reviews" class="primary review-card">
+            {{review.review}}
+        </mat-card>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center stretch" id="cotw">
+        <mat-card id="cotw-card">Clown of the week: Krusty the Clown!</mat-card>
+    </div>
+</div>
+
+<div id="form">
+    <mat-form-field [hideRequiredMarker]="true" [floatLabel]="true">
+        <input matInput placeholder="Full Name" required [(ngModel)]="name" name="name">
+    </mat-form-field>
+    <mat-form-field [hideRequiredMarker]="true">
+        <input required matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="date" name="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field [hideRequiredMarker]="true">
+        <mat-label>Preferred Clown</mat-label>
+        <mat-select required [(ngModel)]="clown" name="clown">
+            <mat-option *ngFor="let clown of clowns" [value]="clown">
+                {{clown}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div id="buttons">
+    <button type="submit" mat-raised-button color="primary" (click)="onBook(name, date, clown)"
+        [disabled]="!dataForm.valid">Book!</button>
+    <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
+</div>

@@ -1,3 +1,11 @@
+html, body {
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Creepster&display=swap');
+@import "@material/layout-grid/mdc-layout-grid";
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -12,8 +20,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$rent-a-clown-primary: mat-palette($mat-indigo);
-$rent-a-clown-accent: mat-palette($mat-pink, A200, A100, A400);
+$rent-a-clown-primary: mat-palette($mat-orange);
+$rent-a-clown-accent: mat-palette($mat-grey, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $rent-a-clown-warn: mat-palette($mat-red);

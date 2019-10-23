@@ -1,0 +1,48 @@
+#form, #buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#buttons {
+    margin-bottom: 20px;
+}
+
+#top-body-wrapper {
+    margin: 20px;
+    min-height: 250px;
+}
+
+#cotw {
+    min-width: 30%;
+}
+
+#reviews {
+    min-width: 300px;
+    max-width: 60%;
+    column-gap: 2.5%;
+    row-gap: 2.5%;
+}
+
+.review-card {
+    width: 40%;
+    height: 80px;
+    max-height: 300px;
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 450px) {
+    .review-card {
+      width: 100%;
+      margin-bottom: 10px;
+      height: auto;
+    }
+
+    #cotw {
+        min-width: 300px;
+    }
+
+    #cotw-card {
+        width: 100%;
+    }
+  }

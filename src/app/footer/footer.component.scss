@@ -1,0 +1,33 @@
+.card {
+    background-color: orange;
+    width: 20%;
+    min-width: 250px;
+    margin: 10px;
+}
+
+#footer-wrapper {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+th {
+    text-align: left;
+}
+
+@media only screen and (max-width: 450px) {
+    mat-divider {
+        display: none;
+    }
+
+    .card {
+        box-sizing: content-box !important;
+    }
+}

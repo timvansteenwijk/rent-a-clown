@@ -1,0 +1,53 @@
+<mat-divider></mat-divider>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around" id="footer-wrapper">
+    <mat-card id="openingTimes" class="card" fxLayout="column" fxLayoutAlign="flex-start">
+        Opening Times:
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Times</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let day of daysOfTheWeek">
+                    <td>{{day.day}}</td>
+                    <td>{{day.times}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card>
+    <mat-divider [vertical]="true"></mat-divider>
+    <mat-card id="aboutUs" class="card">
+        <div>
+            <strong>About Us</strong>
+            <div>This business is founded on a passion for clowns. Bringing laughter and horror to young and old since 1996.</div>
+        </div>
+    </mat-card>
+    <mat-divider [vertical]="true"></mat-divider>
+    <mat-card id="findUs" class="card">
+        <strong>Find us at:</strong>
+        <table>
+            <tr>
+                <td>Oostplein 97</td>
+            </tr>
+            <tr>
+                <td>3011 VX</td>
+            </tr>
+            <tr>
+                <td>Rotterdam</td>
+            </tr>
+        </table>
+    </mat-card>
+    <mat-divider [vertical]="true"></mat-divider>
+    <mat-card class="card" fxLayout="column" fxLayoutAlign="flex-start center">
+        Follow us on social media!
+        <ul>
+            <li><a href="www.facebook.com"><img src="../../assets/images/icons8-facebook-circled-50.png" alt="facebook"/></a></li>
+            <li><a href="www.instagram.com"><img src="../../assets/images/icons8-instagram-old-50.png" alt="instagram"/></a></li>
+            <li><a href="www.reddit.com"><img src="../../assets/images/icons8-reddit-50.png" alt="reddit"/></a></li>
+            <li><a href="www.twitter.com"><img src="../../assets/images/icons8-twitter-50.png" alt="twitter"/></a></li>
+        </ul>
+    </mat-card>
+</div>

@@ -1,0 +1,16 @@
+<div #spacer></div>
+<div stickyThing [spacer]="spacer" id="navbar">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <li>RENT-A-CLOWN</li>
+            <span class="example-fill-remaining-space"></span>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item><a href="#aboutUs">About Us</a></button>
+                <button mat-menu-item><a href="#form">Book a Clown</a></button>
+                <button mat-menu-item><a href="#findUs">Find Us</a></button>
+                <button mat-menu-item><a href="#openingTimes">Opening Times</a></button>
+            </mat-menu>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
